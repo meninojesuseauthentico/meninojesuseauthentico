@@ -5,33 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escola Menino Jesus e Authentico</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
-      text-align: center;
       margin: 0;
       padding: 0;
     }
+
+    /* Cabeçalho com navegação */
+    .header-nav {
+      background-color: white;
+      padding: 15px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .logo-container {
+      flex: 0 0 auto;
+    }
+
+    .logo-container img {
+      height: 60px;
+      width: auto;
+    }
+
+    .nav-left a, .nav-right a {
+      color: #2c5aa0;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-left a:hover, .nav-right a:hover {
+      color: #1a4480;
+      text-decoration: underline;
+    }
+
+    /* Header principal */
     header {
-      background-color: #ffcc00; /* amarelo */
+      background-color: #ffcc00;
       color: black;
       padding: 20px;
+      text-align: center;
     }
+
     main {
       padding: 30px;
+      text-align: center;
     }
+
     footer {
       background-color: #333;
       color: white;
       padding: 20px;
       margin-top: 20px;
+      text-align: center;
     }
+
     footer a {
       color: #ffcc00;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
@@ -84,10 +143,6 @@
       box-shadow: 3px 3px 5px #666;
     }
 
-    .whatsapp-float i {
-      margin-top: 16px;
-    }
-
     /* Ícone do WhatsApp usando CSS */
     .whatsapp-icon {
       width: 30px;
@@ -97,13 +152,51 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .header-nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-left, .nav-right {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-left a, .nav-right a {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Escola Menino Jesus e Authentico</h1>
-    <p>Seja bem-vindo ao nosso site oficial!</p>
-  </header>
+  <!-- Cabeçalho de navegação -->
+  <nav class="header-nav">
+    <div class="nav-left">
+      <a href="#home">Home</a>
+      <a href="#escola">A Escola</a>
+      <a href="#ensino">Ensino</a>
+      <a href="#extracurricular">Extracurricular</a>
+      <a href="#blog">Blog</a>
+    </div>
+    
+    <div class="logo-container">
+      <img src="logo-escola.png" alt="Escola Menino Jesus" />
+    </div>
+    
+    <div class="nav-right">
+      <a href="#ninho">Ninho</a>
+      <a href="#integral">Integral</a>
+      <a href="#matriculas">Matrículas</a>
+      <a href="#inscricao">Inscrição</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+
 
   <main>
     <h2>Página Inicial</h2>
